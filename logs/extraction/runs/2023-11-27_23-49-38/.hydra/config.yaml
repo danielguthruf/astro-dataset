@@ -1,0 +1,40 @@
+task_name: extraction
+extraction:
+  filter:
+    product:
+      dataproduct_type: image
+      extension:
+      - jpg
+      - fits
+      type: D
+      productType:
+      - PREVIEW
+      - SCIENCE
+    n_channels: 3
+    query:
+      project: JWST
+      obs_collection: JWST
+      dataproduct_type: image
+      instrument_name:
+      - NIRCAM/IMAGE
+  dataset_name: jwst
+  csv_output_path: ${paths.data_dir}/extraction/jwst.csv
+  proposal_id_list:
+  - 1176
+  - 2738
+  - 1714
+  - 1227
+  - 1257
+  - 1685
+  - 1726
+  - 1558
+  - 2282
+  - 1176
+  - 4441
+  - 2739
+paths:
+  root_dir: ${oc.env:PROJECT_ROOT}
+  data_dir: ${paths.root_dir}/data/
+  log_dir: ${paths.root_dir}/logs/
+  output_dir: ${hydra:runtime.output_dir}
+  work_dir: ${hydra:runtime.cwd}

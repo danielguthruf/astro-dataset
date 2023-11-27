@@ -1,0 +1,26 @@
+filter:
+  product:
+    dataproduct_type: image
+    extension:
+    - jpg
+    - fits
+    type: D
+    productType:
+    - PREVIEW
+    - SCIENCE
+  n_channels: 3
+dataset_name: jwst
+csv_output_path: ${paths.data_dir}/query/{dataset_name}.csv
+proposal_id_list:
+- 1176
+- 2738
+- 1714
+- 1227
+- 1257
+- 1685
+- 1726
+- 1558
+- 2282
+- 1176
+- 4441
+- 2739
