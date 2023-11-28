@@ -1,0 +1,52 @@
+schema: '2.0'
+stages:
+  extract_jwst:
+    cmd: python src/astro_dataset/extractmodules/extract.py extract=jwst
+    deps:
+    - path: conf/extract/jwst.yaml
+      hash: md5
+      md5: 779a6bc7d4de6651afe6369ceedde5a6
+      size: 421
+    - path: src/astro_dataset/extractmodules/extract.py
+      hash: md5
+      md5: 057ccea7fc3eed033144ed71c9519671
+      size: 1577
+    - path: src/astro_dataset/extractmodules/utils.py
+      hash: md5
+      md5: 13d78689581ac08b8926c82fd591545f
+      size: 2034
+    params:
+      conf/extract/jwst.yaml:
+        product:
+          dataproduct_type: image
+          extension:
+          - jpg
+          - fits
+          type: D
+          productType:
+          - PREVIEW
+          - SCIENCE
+        proposal_id_list:
+        - 1176
+        - 2738
+        - 1714
+        - 1227
+        - 1257
+        - 1685
+        - 1726
+        - 1558
+        - 2282
+        - 1176
+        - 4441
+        - 2739
+        query:
+          project: JWST
+          obs_collection: JWST
+          dataproduct_type: image
+          instrument_name:
+          - NIRCAM/IMAGE
+    outs:
+    - path: data/extraction/jwst.csv
+      hash: md5
+      md5: 160e8f48363ace65b4c78173cd7c0f74
+      size: 871393

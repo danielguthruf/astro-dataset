@@ -17,6 +17,7 @@ pyrootutils = "^1.0.4"
 astroquery = "^0.4.6"
 astropy = "^6.0.0"
 tqdm = "^4.66.1"
+dvc = "^3.30.1"
 
 [tool.poetry.group.test.dependencies]  # https://python-poetry.org/docs/master/managing-dependencies/
 coverage = { extras = ["toml"], version = ">=7.2.5" }

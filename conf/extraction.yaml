@@ -1,8 +1,7 @@
 defaults:
-  - _self_
-  - extraction: jwst.yaml
-  - paths: default.yaml
-  - hydra: default.yaml
+  - extract: jwst
+  - paths: default
+  - hydra: default
 
 # task name, determines output directory path
-task_name: "extraction"
+task_name: "extract"

@@ -21,19 +21,17 @@ log = logging.getLogger(__name__)
 
 @hydra.main(config_path=str(root / "conf"), config_name="extraction", version_base=None)
 def main(cfg: DictConfig) -> None:
-    cfg = cfg.extraction
+    cfg = cfg.extract
     log.info(OmegaConf.to_yaml(cfg, resolve=True))
     log.info(f"Extraction of {cfg.dataset_name} Started!")
     proposal_dataframe_list = []
     for proposal_id in tqdm(cfg.proposal_id_list):
         logging.info(f"Processing Proposal ID: {proposal_id}")
         try:
-            observations = get_observations(proposal_id, cfg.filter.query)
+            observations = get_observations(proposal_id, cfg.query)
             products = get_products(observations)
             proposal_dataframe_list.append(
-                get_filtered_products(
-                    products, observations, cfg.filter.product, cfg.filter.n_channels
-                )
+                get_filtered_products(products, observations, cfg.product)
             )
         except ZeroDivisionError as error:
             logging.critical(f"Proposal ID: {proposal_id}. Error: {error}")

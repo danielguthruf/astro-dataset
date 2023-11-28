@@ -1,0 +1,14 @@
+stages:
+  extract_jwst:
+    cmd: python src/astro_dataset/extractmodules/extract.py extract=jwst
+    deps:
+    - src/astro_dataset/extractmodules/extract.py
+    - src/astro_dataset/extractmodules/utils.py
+    - conf/extract/jwst.yaml
+    params: 
+      - conf/extract/jwst.yaml:
+        - product
+        - query
+        - proposal_id_list
+    outs:
+    - data/extraction/jwst.csv

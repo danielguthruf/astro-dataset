@@ -1,9 +1,0 @@
-defaults:
-  - default
-  
-query:
-  project: JWST
-  obs_collection: JWST
-  dataproduct_type: image
-  instrument_name: [NIRCAM/IMAGE]
-  

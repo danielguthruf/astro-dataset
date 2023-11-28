@@ -1,7 +1,0 @@
-product:
-  dataproduct_type: image
-  extension: [jpg, fits]
-  type: D
-  productType: [PREVIEW, SCIENCE]
-
-n_channels: 3
