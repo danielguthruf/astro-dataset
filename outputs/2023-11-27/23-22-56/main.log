@@ -1,6 +1,0 @@
-[2023-11-27 23:22:56,525][__main__][INFO] - Extraction of jwst Started!
-[2023-11-27 23:23:28,556][root][INFO] - Number of Observations: 110
-[2023-11-27 23:24:00,543][root][INFO] - Number of Products: 252664
-[2023-11-27 23:24:12,305][root][INFO] - Number of Filtered Products: 188
-[2023-11-27 23:24:12,329][root][INFO] - Joind Products and Observations Shape: (188, 51)
-[2023-11-27 23:24:58,850][root][INFO] - N-Channels 3 applied. Shape: (188, 53)
